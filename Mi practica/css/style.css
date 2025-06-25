@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Krub:wght@300;400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f4f7fa;
+  font-family: "Krub";
+}
+
+
+/* Cabecera de la pagina principal header */
+header {
+  background-color: #2c3e50;
+  color: #ffffff;
+  max-width: 2080px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+  font-family: "Oswald";
+}
+
+header h1 {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+header h1 .cuadro {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  margin-left: 20px;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  padding: 10px 0;
+  border-bottom: 3px solid transparent;
+  margin: 0 30px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+}
+header nav ul li:hover {
+  border-bottom: 3px solid #fff;
+}
+
+
+/* Sección de la pagina*/
+section{
+    padding: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 2080px;
+  margin: 30px auto;
+}
+
+.image-background {
+  width: 100%;
+  opacity: 1;
+  filter: brightness(0.4);
+  display: block;
+  /*border-radius: 10px;*/
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-family: "Oswald";
+  font-weight: normal;
+  letter-spacing: 10px;
+  font-size: 128px;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-family: "Krub";
+  font-weight: normal;
+  font-size: 38px;
+  text-transform: uppercase;
+}
+
+/* Estilo general para la sección personal perfil */
+.perfil {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px; /* Espacio entre texto e imagen*/
+  padding: 50px 8%;
+  /*margin-top: 80px; Separación de la sección anterior*/
+}
+
+.perfil-texto {
+  flex: 1;
+  max-width: 800px;
+  align-self: center;
+  text-align: justify;
+}
+
+.perfil-texto h2 {
+  font-family: "Oswald";
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #2d2d2d;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+}
+
+.perfil-texto p {
+  margin: 25px 0 0 0;
+  font-family: "Krub";
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 1.6;
+  color: #2d2d2d;
+}
+
+.perfil-imagen img {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Sección Skillers */
+.skiller {
+  margin: 10px;
+  padding: 0;
+}
+
+.skiller-content {
+  padding: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2d2d2d;
+  font-family: "Oswald";
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.col {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 25px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.col:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item h2 {
+  color: #2d2d2d;
+  font-size: 1.4rem;
+  font-family: "Krub";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress-container {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 25px;
+  position: relative;
+  transition: width 2s ease-in-out;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 0;
+  }
+}
+
+.html-bar {
+  background-color: #e34c26;
+  width: 90%;
+}
+
+.css-bar {
+  background-color: #1572b6;
+  width: 80%;
+}
+
+.js-bar {
+  background-color: #f7df1e;
+  width: 40%;
+}
+
+.algo-bar {
+  background-color: #9c27b0;
+  width: 100%;
+}
+
+.porcentage {
+  color: #8f8a8a;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.9rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 8px;
+}
+
+
+/* Footer Styles */
+footer {
+  background-color: #141414;
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-content h3 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+
+.footer-content .development {
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+.footer-content p {
+  color: #ffffff;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.github {
+  font-size: 30px;
+}
+
+.tiktok {
+  font-size: 30px;
+}
+
+.twitter {
+  font-size: 30px;
+}
+
+.instagram {
+  font-size: 30px;
+}
+
+.social-link:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.copyright {
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+/* Animación de entrada*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+
+@media (max-width: 768px) {
+  /* Encabezado de la página o Cabecera principal */
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nombre {
+    display: none;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  section {
+    padding: 25px;
+  }
+
+  .col {
+    padding: 20px;
+  }
+
+  .skill-item h2 {
+    font-size: 1.2rem;
+  }
+
+
+  /* Estilos para el header en móviles */
+  header {
+    padding: 15px; /*15px 20px*/
+  }
+
+  header h1 {
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  .cuadro {
+    display: inline-block;
+  }
+
+  header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    /*align-items: center;*/
+  }
+
+  header nav ul li{
+    margin-left: 10px;
+  }
+
+  header nav ul li a {
+    text-decoration: none;
+  }
+
+  header nav ul li a:hover {
+    border-bottom: 3px solid transparent #fff;
+  }
+
+
+  /* Estilos para la sección descripcion personal perfil en móviles */
+  section{
+    padding: 0;
+  }
+  .container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .image-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+  }
+
+  #titulo {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  #descripcion {
+    font-size: 15px;
+  }
+
+  /* Estilos para la sección perfil en móviles */
+  .perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .perfil-texto {
+    text-align: center;
+  }
+
+  .perfil-texto h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .perfil-texto p {
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .perfil-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .perfil-image img {
+    max-width: 200px;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+  }
+
+
+/* Sección Skiller*/
+  .skiller-content {
+    font-size: 25px;
+  }
+
+
+/*Cabecera final Footer*/
+  .footer-content h3{
+    font-size: 1.4rem;
+  }
+
+  .footer-content p{
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .social-links{
+    gap: 20px;
+  }
+
+  .social-link {
+    width: 38px;
+    height: 38px;
+  }
+
+  .github {
+    font-size: 18px;
+  }
+
+  .tiktok {
+    font-size: 18px;
+  }
+
+  .twitter {
+    font-size: 18px;
+  }
+
+  .instagram {
+    font-size: 18px;
+  }
+}

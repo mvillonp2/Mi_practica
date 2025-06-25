@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/formEjercicios.css">
+    <title>Tienda George</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Tienda George S.A</h1>
+        <a href="#" class="back-link" onclick="window.history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver al Menú
+        </a>
+        <p class="subtitle">Calculadora de Descuentos</p>
+        <ul>
+            <li>
+                Si un cliente pertenece al tipo A o es discapacitado, el aumento en el límite de descuento será un 20% sumado al valor que tiene.
+            </li>
+            <li>
+                Si pertenece al tipo B y no es discapacitado, el aumento será un 15% sumado al valor que tiene.
+            </li>
+            <li>
+                Para clientes del tipo C, el aumento será un 10% sumado al valor que tiene.
+            </li>
+            <li>
+                Para cualquier otro tipo de cliente, no habrá aumento de descuento.
+            </li>
+        </ul>
+        
+        <form action="../menu.html">
+            <div class="input-group">
+                <label for="precioCompra">Precio de la compra ($):</label>
+                <input type="number" id="precioCompra" step="0.01" min="0" required>
+            </div>
+
+            <div class="input-group">
+                <label for="tipoCliente">Tipo de Cliente:</label>
+                <select id="tipoCliente" required>
+                    <option value="">Selecciona un tipo</option>
+                    <option value="A">Tipo A</option>
+                    <option value="B">Tipo B</option>
+                    <option value="C">Tipo C</option>
+                    <option value="Otro">Otro tipo</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="esDiscapacitado">
+                    <label for="esDiscapacitado">Cliente con discapacidad</label>
+                </div>
+            </div>
+            <div id="resultado" class="resultado">
+                <strong>Resultado:</strong>
+                Complete todos los campos del formulario..
+            </div>
+            <button type="button" onclick="calcularDescuentoAjustado()">Calcular Descuento</button>
+            <button type="button" onclick="limpiarFormulario4()">Limpiar</button>
+        </form>
+    </div>
+
+    <script src="../javascript/menu.js"></script>
+</body>
+</html>

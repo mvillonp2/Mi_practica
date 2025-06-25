@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/formEjercicios.css">
+    <title>Arreglo Sin Ciclos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Arreglo Simple</h1>
+        <a href="#" class="back-link" onclick="window.history.back()">
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver al Menú
+            </a>
+        <p>Ingrese varios valores sean números o palabras separado con &#40;;&#41; y presente un string separado con &#40;,&#41;.</p>
+        
+        <form action="../menu.html">
+            <div class="input-group">
+                <label for="arreglo">Numeros/Palabras:</label>
+                <input type="text" id="arreglo" name="arreglo" required>
+            </div>
+            
+            <div id="resultado" class="resultado">
+                <strong>Resultado:</strong>
+                Complete el formulario para presentar un arreglo simple separado con &#40;,&#41;.
+            </div>
+
+            <div class="btn-group">
+            <button type="button" class="btn-primary" onclick="arregloSinCiclos()">Ejecutar</button>
+            <!-- <button type="reset" class="btn-secondary" onclick="">Limpiar</button> -->
+            </div>
+        </form>
+    </div>
+
+    <script src="../javascript/menu.js"></script>
+</body>
+</html>

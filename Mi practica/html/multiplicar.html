@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/formEjercicios.css">
+    <title>Tablas de multiplicar</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Tabla de multiplicar de &#40; X &#41;</h1>
+        <a href="#" class="back-link" onclick="window.history.back()">
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver al Menú
+            </a>
+        <p>Ingrese cualquier número. Presente una tabla  de multiplicar de &#40; X &#41; desde &#40; 1 hasta el 12 &#41;</p>
+        
+        <form action="../menu.html">
+            <div class="input-group">
+                <label for="tabla">Tabla de Mutiplicar del:</label>
+                <input type="number" id="tabla" name="tabla" required>
+            </div>
+
+            <div class="input-group">
+                <label for="inicio">Desde:</label>
+                <input type="number" id="inicio" value="1" name="inicio" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="fin">Hasta:</label>
+                <input type="number" id="fin" name="fin" required>
+            </div>
+            
+            <div id="resultado" class="resultado">
+                <strong>Resultado:</strong>
+                Complete el formulario para presentar la tabla de multiplicar de &#40; X &#41;
+            </div>
+
+            <div class="btn-group">
+            <button type="button" class="btn-primary" onclick="tablaMultiplicar()">Verificar</button>
+            <button type="reset" class="btn-secondary" onclick="">Limpiar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../javascript/menu.js"></script>
+</body>
+</html>

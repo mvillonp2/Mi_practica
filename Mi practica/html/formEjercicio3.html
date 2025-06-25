@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/formEjercicios.css">
+    <title>Restaurante</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Cuenta - Restaurante</h1>
+    <a href="#" class="back-link" onclick="window.history.back()">
+      <i class="fa-solid fa-arrow-left"></i>
+      Volver al Menú
+    </a>
+    <p>Ingresa el total de la cuenta y aplica descuento por fidelidad para calcular el monto final.</p>
+    <ul>
+      <li>Si el total de la cuenta supera los $70, aplica el descuento por fidelidad.</li>
+      <li>Caso contrario, no se aplica ningún descuento.</li>
+    </ul>
+    
+    <form action="../menu.html">
+      <div class="input-group">
+        <label for="totalCuenta">Total de la cuenta ($):</label>
+        <input type="number" id="totalCuenta" step="0.01" min="0" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="descuentoFidelidad">Descuento por cliente frecuente (%):</label>
+        <input type="number" id="descuentoFidelidad" step="0.01" min="0" required>
+      </div>
+
+      <div id="resultado" class="resultado">
+        <strong>Resultado:</strong>
+        Complete todos los campos del formulario..
+      </div>
+      
+      <button type="button" onclick="calcularCuentaFinal()">Calcular Total</button>
+      <button type="button" onclick="limpiarFormulario3()">Limpiar</button>
+    </form>
+  </div>
+  
+  <script src="../javascript/menu.js"></script>
+</body>
+</html>

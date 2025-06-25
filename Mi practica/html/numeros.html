@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/formEjercicios.css">
+    <title>Presentar números 1 a N</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Presentar número 1 a N (1)</h1>
+        <a href="#" class="back-link" onclick="window.history.back()">
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver al Menú
+            </a>
+        
+        <p>Ingresa un número. Presentar una secuencia</p>
+        
+        <form action="../menu.html">  
+            <div class="input-group">
+                <label for="numero">Número:</label>
+                <input type="number" id="numero" name="numero" required>
+            </div>
+            
+            <div id="resultado" class="resultado">
+                <strong>Resultado:</strong>
+                Complete el formulario para presentrar una secuencia de números
+            </div>
+
+            <div class="btn-group">
+            <button type="button" class="btn-primary" onclick="presentarNumero()">Verificar</button>
+            <button type="reset" class="btn-secondary">Limpiar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- <div class="container" style="margin-left: 20px;">
+        <h1>Presentar números impares (2)</h1>
+        <p>Ingresa un número y muestres solo números impares</p>
+        <form action="./menu.html">
+            <div class="input-group">
+                <label for="mensaje">Mensaje:</label>
+                <input type="text" id="mensaje" name="mensaje" required>
+            </div>
+            
+            <div id="resultado2" class="resultado">
+                <strong>Resultado:</strong>
+                Complete el formulario para presentrar los números impares
+            </div>
+
+            <div class="btn-group">
+            <button type="button" class="btn-primary" onclick="presentarMensaje()">Verificar</button>
+            <button type="reset" class="btn-secondary" onclick="">Limpiar</button>
+            </div>
+        </form>
+    </div> -->
+
+    <!-- <div class="container" style="margin-left: 20px;">
+        <h1>Presentar N veces mensaje (3)</h1>
+        <p>Ingresa un número y presentar los números pares</p>
+        <form action="./menu.html">
+            <div class="input-group">
+                <label for="msm">Mensaje:</label>
+                <input type="text" id="msm" name="msm" required>
+            </div>
+
+            <div class="input-group">
+                <label for="cantidad_">Cantidad:</label>
+                <input type="number" id="cantidad_" name="cantidad_" required>
+            </div>
+            
+            <div id="resultado3" class="resultado">
+                <strong>Resultado:</strong>
+                Complete el formulario para presentrar el N veces un mensaje
+            </div>
+
+            <div class="btn-group">
+            <button type="button" class="btn-primary" onclick="presentarMensaje3()">Verificar</button>
+            <button type="reset" class="btn-secondary" onclick="">Limpiar</button>
+            </div>
+        </form>
+    </div> -->
+
+    <script src="../javascript/menu.js"></script>
+</body>
+</html>

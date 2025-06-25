@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/formEjercicios.css">
+    <title>Comparación de Números</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Comparar de Números</h1>
+        <a href="#" class="back-link" onclick="window.history.back()">
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver al Menú
+            </a>
+        <p>Ingresa cuatro números para verificar:</p>
+        <ul>
+            <li>Si el número 1 es la mitad del número 2.</li>
+            <li>Si el número 3 es divisor del número 4.</li>
+        </ul>
+        
+        <form action="../menu.html">
+            <div class="input-group">
+                <label for="numero1">Número 1:</label>
+                <input type="number" id="numero1" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="numero2">Número 2:</label>
+                <input type="number" id="numero2" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="numero3">Número 3:</label>
+                <input type="number" id="numero3" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="numero4">Número 4:</label>
+                <input type="number" id="numero4" required>
+            </div>
+            
+            <div id="resultado" class="resultado">
+                <strong>Resultado:</strong>
+                Complete el formulario para comparar los números
+            </div>
+
+            <div class="btn-group">
+            <button type="button" class="btn-primary" onclick="compararNumeros()">Verificar</button>
+            <button type="reset" class="btn-secondary" onclick="limpiarFormulario1()">Limpiar</button>
+            </div>
+        </form>
+        
+        <!--<div id="resultado" class="resultado" style="display: none;"></div>-->
+    </div>
+
+    <script src="../javascript/menu.js"></script>
+</body>
+</html>
